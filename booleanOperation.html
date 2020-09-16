@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Boolean Order of Operations</title>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="lab1.css"/>
+    </head>
+    <body>
+        <h2>Boolean Order of Operations</h2>
+        <p>The priority between "and" and "or" can be determined by using two boolean statements.</p>
+        
+        <pre class="pybox">
+            &gt;&gt;&gt; 1 or 0 and 0
+            1
+            &gt;&gt;&gt; (1 or 0) and 0
+            0
+        </pre>
+
+        <p>If "or" had a higher priority than "and" then adding parenthesis around the arguments to "or" 
+        would have no effect. However, if "and" had a higher priority the parenthesis would change the 
+        outcome. Since the later is the observed outcome, <b>"and" has a higher priority than "or"</b>.</p>
+
+        <p>We can also determine the priority between "not" and "and" by using two very similar boolean 
+        statements.</p>
+
+        <pre class="pybox">
+            &gt;&gt;&gt; not 0 and 0 or 0
+            0
+            &gt;&gt;&gt; not (0 and 0) or 0
+            1
+        </pre>
+
+        <p>We can use the same logic as above to determine that <b>"not" has a higher priority than 
+        "and"</b>. If "and" had a higher priority than "not" then adding parenthesis would not have changed 
+        the outcome.</p>
+
+    </body>
+</html>
